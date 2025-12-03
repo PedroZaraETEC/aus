@@ -75,19 +75,40 @@ div.tempoVi span.background-tempoVi{
     flex-direction: column;
 }
 
-body div.mainTela1 {
+body main.background-section-tela1 {
     background-image: linear-gradient(to top, #000000cf, #00000099 );
     width: 100%;
     height: 100dvh;
+    margin: 0px 50px 0px 50px;
 
 }
 
+body main.mainTela1 {
+    margin: 30px 50px 30px 50px;
+}
+
 div.mainTela1 main {
+    width: 100vw;
+    height: 100dvh;
     margin: 0px 30px 0px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+div.mainTela2 main {
+    width: 100vw;
+    height: 100dvh;
+    margin: 0px 30px 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body div main.mainTela2 {
+    margin: 0px 50px 0px 50px;
 }
 
 div.mainTela1 main input {
@@ -176,6 +197,12 @@ section div.box {
     justify-content: center;
     flex-direction: column;
     color: #ffff;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000000cf, #00000099 );
 }
 
 section div.box div.text-inbox {
