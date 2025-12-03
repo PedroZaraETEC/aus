@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<style>
+    gmp-map {
+        height: 100%;
+    }
+</style>
+
+<body class="tela2">
+    
+    <div class="mainTela1">
+        <main>
+            <h1>Nosso tempo</h1>
+    
+            <p>Hoje mesmo diante de tantas reviravoltas continuamos aqui, e mesmo tendo os nossos altos e baixos não paramos de nos preocupar um com o outro</p>
+            <p>Você faz os meus dias mais coloridos, você cura a minha solidão como ninguém, penso em você em todos os momentos</p>
+        
+            <div class="tempoVi">
+                <span class="background-tempoVi"></span>
+                <ul>
+                    <li>Anos: <span id="liAnos">00</span></li>
+                    <li>Meses: <span id="liMeses">00</span></li>
+                    <li>Semanas: <span id="liSemanas">00</span></li>
+                    <li>Dias: <span id="liDias">00</span></li>
+                    <li>Horas: <span id="liHoras">00</span></li>
+                    <li>Minutos: <span id="liMinutos">00</span></li>
+                    <li>Segundos: <span id="liSegundos">00</span></li>
+                </ul>
+            </div>
+            
+            <p>Acredito que o tempo é a coisa mais importante em uma parceria e espero nunca ter que terminar o nosso tempo.</p>
+            <p>Na distância, na solitude, na doença eu quero você como ninguém</p>
+    
+            <div class="dataLugar">
+                <p>14/11/2023</p>
+                <p>-23.688451, -46.624031</p>
+            </div>
+            <input type="button" value="Continuar" class="botaoClass" onclick="entrar()">  
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+    const data = new Date("2023-11-14 10:02:00");
+
+    function atualizarTempo() {
+        const agora = new Date();
+        let diferenca = data - agora;
+
+        if (diferenca < 0) diferenca *= -1;
+
+        const segundos = Math.floor(diferenca / 1000);
+        const Minutos  = Math.floor(diferenca / (1000 * 60));
+        const Horas    = Math.floor(diferenca / (1000 * 60 * 60));
+        const dias     = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const semanas = Math.floor(dias / 7);
+        const meses   = Math.floor(dias / 30.44);
+        const anos    = Math.floor(dias / 365.25);
+
+
+        document.getElementById("liAnos").textContent = anos;
+        document.getElementById("liMeses").textContent = meses;
+        document.getElementById("liSemanas").textContent = semanas;
+        document.getElementById("liDias").textContent = dias;
+        document.getElementById("liHoras").textContent = Horas;
+        document.getElementById("liMinutos").textContent = Minutos;
+        document.getElementById("liSegundos").textContent = segundos;
+    }   
+
+    setInterval(atualizarTempo, 1000);
+    atualizarTempo();
+
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>
